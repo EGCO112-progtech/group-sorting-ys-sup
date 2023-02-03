@@ -33,15 +33,6 @@ void insertion(int a[],int n){
   }
 }
 
-void insertion(int a[], int n) {}
-
-void swap(int *a, int *b) {
-  int temp;
-  temp = *a;
-  *a = *b;
-  *b = temp;
-}
-
 void bubbleSort(int a[], int n) {
 
   for(int i = 0; i < n-1; i++)
