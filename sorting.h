@@ -28,7 +28,7 @@ void insertion(int a[],int n){
       swap(&a[j-1], &a[j]);
       j--;
     }
-    printf("\n");
+    // printf("\n");
     display(a, n);
   }
 }
