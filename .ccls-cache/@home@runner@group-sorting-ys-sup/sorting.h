@@ -9,27 +9,11 @@ void display(int a[], int n) {
   printf("\n");
   // apo's part
 }
-void selectionSort(int data[], int length) 
-{ 
-	int i, j, m, mi; 
-	
-     display(data,length);
-     
-	
-} 
 
-void insertion(int a[],int n){
-// ley's part
-  for (int i = 0; i < n; i++)
-  {
-    int j = i;
-    while (j > 0 && a[j-1] > a[j])
-    {
-      swap(&a[j-1], &a[j]);
-      j--;
-    }
-    display(a, n);
-  }
+void selectionSort(int data[], int length) {
+  int i, j, m, mi;
+
+  display(data, length);
 }
 
 void insertion(int a[], int n) {}
