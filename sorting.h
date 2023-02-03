@@ -20,6 +20,7 @@ void display(int a[], int n) {
 }
 void insertion(int a[],int n){
 // ley's part
+  printf("\n");
   for (int i = 0; i < n; i++)
   {
     int j = i;
@@ -28,7 +29,7 @@ void insertion(int a[],int n){
       swap(&a[j-1], &a[j]);
       j--;
     }
-    // printf("\n");
+    printf("\n");
     display(a, n);
   }
 }
