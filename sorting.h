@@ -20,16 +20,15 @@ void display(int a[], int n) {
 }
 void insertion(int a[],int n){
 // ley's part
-  printf("\n");
   for (int i = 0; i < n; i++)
   {
     int j = i;
+    printf("\n");
     while (j > 0 && a[j-1] < a[j])
     {
       swap(&a[j-1], &a[j]);
       j--;
     }
-    printf("\n");
     display(a, n);
   }
 }
