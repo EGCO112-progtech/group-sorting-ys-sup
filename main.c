@@ -1,9 +1,9 @@
-#define N 6
 #include <stdio.h>
 
 #include "sorting.h"
 
 int main() {
+  int N=5;
   int a[N]={5,6,9,7,6};
   int i,j,new_number;
 
@@ -11,7 +11,7 @@ int main() {
   //bubbleSort(a,N); 
    //insertion(a,N);
 
-  selectionSort(a,N-1);
+  selectionSort(a,N);
 //display(a,N);
  return 0;
 }
