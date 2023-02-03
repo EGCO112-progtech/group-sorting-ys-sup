@@ -19,11 +19,18 @@ void selectionSort(int data[], int length)
 	
 } 
 
-
-
 void insertion(int a[],int n){
 // ley's part
-
+  for (int i = 0; i < n; i++)
+  {
+    int j = i;
+    while (j > 0 && a[j-1] > a[j])
+    {
+      swap(&a[j-1], &a[j]);
+      j--;
+    }
+    display(a, n);
+  }
 }
 
 void swap(int *a,int *b){
