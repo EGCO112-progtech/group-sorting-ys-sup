@@ -18,21 +18,40 @@ void display(int a[], int n) {
   printf("\n");
   // apo's part
 }
-void insertion(int a[],int n){
+void insertion(int a[], int lenght){
 // ley's part
-  for (int i = 0; i < n; i++)
+  int i, j, value;
+
+  for (i = 1; i < lenght; i++)
   {
-    int j = i;
-    while (j > 0 && a[j-1] < a[j])
+    value = a[i];
+    for (j = i - 1; j >= 0 && a[j] < value;j--)
     {
-      swap(&a[j-1], &a[j]);
-      j--;
+      a[j + 1] = a[j];
+      display(a, lenght);
     }
+    a[j + 1] = value;
+    display(a, lenght);
     printf("\n");
-    display(a, n);
   }
-  printf("\n");
 }
+
+
+// void insertion(int a[],int n){
+//   for (int i = 0; i < n; i++)
+//   {
+//     int j = i;
+//     while (j > 0 && a[j-1] < a[j])
+//     {
+//       swap(&a[j-1], &a[j]);
+//       j--;
+//       display(a, n);
+//     }
+//     printf("\n");
+//     display(a, n);
+//   }
+
+// }
 
 void selectionSort(int a[], int n) {
   int i, j;
@@ -74,7 +93,7 @@ void bubbleSort(int a[], int n) {
     printf("\n");
     if (sorted == 0) break;
   }
-  printf("\n");
+  // printf("\n");
 
 }
 
