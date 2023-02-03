@@ -71,8 +71,8 @@ void selectionSort(int a[], int n) {
       }
     }
     swap(&a[j], &a[mi]);
-    printf("\n");
     display(a, n);
+    printf("\n");
   }
 }
 
