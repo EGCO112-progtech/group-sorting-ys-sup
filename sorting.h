@@ -10,15 +10,6 @@ void display(int a[], int n) {
   }
   // apo's part
 }
-void selectionSort(int data[], int length) 
-{ 
-	int i, j, m, mi; 
-	
-     display(data,length);
-     
-	
-} 
-
 void insertion(int a[],int n){
 // ley's part
   for (int i = 0; i < n; i++)
@@ -28,6 +19,27 @@ void insertion(int a[],int n){
     {
       swap(&a[j-1], &a[j]);
       j--;
+    }
+    display(a, n);
+  }
+}
+
+void selectionSort(int a[], int n) {
+  int i, j;
+  int m = a[0]; // dec m is min
+  int mi = 0;
+
+  for (j = 0; j < n - 1; j++) {
+    m = a[j];
+    mi = j;
+
+    for (i = j + 1; i < n; i++) {
+      if (m < a[i]) // find real min
+      // if (a[mi] > a[i])
+      {
+        m = a[i];
+        mi = i;
+      }
     }
     display(a, n);
   }
