@@ -22,7 +22,7 @@ void selectionSort(int data[], int length)
 
 
 void insertion(int a[],int n){
-
+// ley's part
 
 }
 
