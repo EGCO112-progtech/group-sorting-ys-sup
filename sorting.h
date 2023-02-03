@@ -4,9 +4,10 @@ void display(int a[], int n) {
 
   int i;
 
-  for (i = 0; i < n; i++)
+  for (i = 0; i < n; i++) {
     printf("%5d", a[i]);
-  printf("\n");
+    printf("\n");
+  }
   // apo's part
 }
 void selectionSort(int data[], int length) 
@@ -43,7 +44,7 @@ void swap(int *a, int *b) {
 
 void bubbleSort(int a[], int n) {
 
-    for(int i = 0; i < n-1; i++)
+  for(int i = 0; i < n-1; i++)
   {
     int sorted;
     for (int j = 0; j < n-i-1; j++)
@@ -57,4 +58,5 @@ void bubbleSort(int a[], int n) {
     }
     if (sorted == 0) break;
   }
+
 }
