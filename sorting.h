@@ -10,14 +10,6 @@ void display(int a[], int n) {
   // apo's part
 }
 
-void selectionSort(int data[], int length) {
-  int i, j, m, mi;
-
-  display(data, length);
-}
-
-void insertion(int a[], int n) {}
-
 void swap(int *a, int *b) {
   int temp;
   temp = *a;
@@ -25,13 +17,26 @@ void swap(int *a, int *b) {
   *b = temp;
 }
 
-void bubbleSort(int a[], int n) {
-
+void selectionSort(int a[], int n) {
   int i, j;
-  int sorted;
-  // how may pair to compare?
-  for (j = 1; j <= n - 1; j++) {
+  int m = a[0]; // dec m is min
+  int mi = 0;
 
+  for (j = 0; j < n - 1; j++) {
+    m = a[j];
+    mi = j;
+    for (i = j + 1; i < n; i++) {
+      if (m > a[i]) // find real min
+      // if (a[mi] > a[i])
+      {
+        m = a[i];
+        mi = i;
+      }
+    }
+    swap(&a[j], &a[mi]);
     display(a, n);
   }
-}
+
+  void insertion(int a[], int n) {}
+
+  void bubbleSort(int a[], int n) {}
