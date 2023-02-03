@@ -1,13 +1,21 @@
 // selection sort function module in C
 
+
+void swap(int* a, int* b)
+{
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+
 void display(int a[], int n) {
 
   int i;
 
-  for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) 
     printf("%5d", a[i]);
-    printf("\n");
-  }
+  printf("\n");
   // apo's part
 }
 void insertion(int a[],int n){
@@ -15,11 +23,12 @@ void insertion(int a[],int n){
   for (int i = 0; i < n; i++)
   {
     int j = i;
-    while (j > 0 && a[j-1] > a[j])
+    while (j > 0 && a[j-1] < a[j])
     {
       swap(&a[j-1], &a[j]);
       j--;
     }
+    printf("\n");
     display(a, n);
   }
 }
@@ -41,6 +50,8 @@ void selectionSort(int a[], int n) {
         mi = i;
       }
     }
+    swap(&a[j], &a[mi]);
+    printf("\n");
     display(a, n);
   }
 }
@@ -52,14 +63,24 @@ void bubbleSort(int a[], int n) {
     int sorted;
     for (int j = 0; j < n-i-1; j++)
     {
-      if (a[j] > a[j + 1])
+      if (a[j] < a[j + 1])
       {
         swap(&a[j], &a[j+1]);
         sorted = 1;
       }
       display(a, n);
     }
+    printf("\n");
     if (sorted == 0) break;
   }
 
+}
+
+int typeCheck(char* x)
+{
+  if (strcmp(x, "bubble") == 0) return 1;
+  if (strcmp(x, "selection") == 0) return 2;
+  if (strcmp(x, "insertion") == 0) return 3;
+
+  return 0;
 }

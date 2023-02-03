@@ -1,31 +1,39 @@
-#define N 6
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
 #include "sorting.h"
 
-int main() {
-<<<<<<< HEAD
-  int a[N] = {5, 6, 9, 7, 6};
-  int i, j, new_number;
-=======
-  int a[N]={5,6,9,7,6};
-  int i,j,new_number;
+int main(int argc, char *argv[]) {
+  int *a, N, i, j, new_number;
 
-   //display(a,N);
-  //bubbleSort(a,N); 
-   //insertion(a,N);
+  char *sorting = argv[1];
+  int checker = typeCheck(sorting);
 
-  selectionSort(a,N-1);
-//display(a,N);
+  N = argc - 2;
+  a = (int*)malloc(sizeof(int) * N);
+  for (i = 0; i < N; i++)
+  {
+    a[i] = atoi(argv[i+2]);
+  }
+
+
+  display(a, N);
+  switch (checker)
+  {
+  case 1:
+    bubbleSort(a, N);
+    break;
+  case 2:
+    selectionSort(a, N);
+    break;
+  case 3:
+    insertion(a, N);
+    break;
+  
+  default:
+    break;
+  }
+  display(a, N);
+
  return 0;
-}
->>>>>>> origin/porames
-
-  // display(a,N);
-  // bubbleSort(a,N);
-  // insertion(a,N);
-
-  selectionSort(a, N);
-  // display(a,N);
-  return 0;
 }
