@@ -26,10 +26,9 @@ void selectionSort(int a[], int n) {
   for (j = 0; j < n - 1; j++) {
     m = a[j];
     mi = j;
-    printf("m = %d\n", m);
-    printf("mi = %d\n", mi);
+
     for (i = j + 1; i < n; i++) {
-      if (m > a[i]) // find real min
+      if (m < a[i]) // find real min
       // if (a[mi] > a[i])
       {
         m = a[i];
@@ -37,10 +36,7 @@ void selectionSort(int a[], int n) {
       }
     }
     swap(&a[j], &a[mi]);
-    printf("a[j] = %d\n", a[j]);
-    printf("a[mi] = %d\n", a[mi]);
     display(a, n);
-    printf("\n");
   }
 }
 
