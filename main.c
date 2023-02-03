@@ -33,6 +33,7 @@ int main(int argc, char *argv[]) {
   default:
     break;
   }
+  printf("\n");
   display(a, N);
 
  return 0;
